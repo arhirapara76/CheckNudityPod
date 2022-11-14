@@ -13,6 +13,10 @@
 		882C5C2829223C7600506439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882C5C2629223C7600506439 /* Main.storyboard */; };
 		882C5C2A29223C7700506439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882C5C2929223C7700506439 /* Assets.xcassets */; };
 		882C5C2D29223C7700506439 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882C5C2B29223C7700506439 /* LaunchScreen.storyboard */; };
+		882C5C502922502500506439 /* Nudity.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C4B2922502500506439 /* Nudity.mlpackage */; };
+		882C5C512922502500506439 /* MFNudity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C4C2922502500506439 /* MFNudity.swift */; };
+		882C5C522922502500506439 /* NudityModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C4D2922502500506439 /* NudityModelClass.swift */; };
+		882C5C532922502500506439 /* MFNudityImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C4E2922502500506439 /* MFNudityImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		882C5C2929223C7700506439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		882C5C2C29223C7700506439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882C5C2E29223C7700506439 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		882C5C4B2922502500506439 /* Nudity.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = Nudity.mlpackage; sourceTree = "<group>"; };
+		882C5C4C2922502500506439 /* MFNudity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFNudity.swift; sourceTree = "<group>"; };
+		882C5C4D2922502500506439 /* NudityModelClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NudityModelClass.swift; sourceTree = "<group>"; };
+		882C5C4E2922502500506439 /* MFNudityImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFNudityImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,24 @@
 				882C5C2029223C7600506439 /* AppDelegate.swift */,
 				882C5C2229223C7600506439 /* SceneDelegate.swift */,
 				882C5C2429223C7600506439 /* ViewController.swift */,
+				882C5C4A2922502500506439 /* NudityClass */,
 				882C5C2629223C7600506439 /* Main.storyboard */,
 				882C5C2929223C7700506439 /* Assets.xcassets */,
 				882C5C2B29223C7700506439 /* LaunchScreen.storyboard */,
 				882C5C2E29223C7700506439 /* Info.plist */,
 			);
 			path = CheckNudityPod;
+			sourceTree = "<group>";
+		};
+		882C5C4A2922502500506439 /* NudityClass */ = {
+			isa = PBXGroup;
+			children = (
+				882C5C4B2922502500506439 /* Nudity.mlpackage */,
+				882C5C4E2922502500506439 /* MFNudityImage.swift */,
+				882C5C4C2922502500506439 /* MFNudity.swift */,
+				882C5C4D2922502500506439 /* NudityModelClass.swift */,
+			);
+			path = NudityClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882C5C522922502500506439 /* NudityModelClass.swift in Sources */,
+				882C5C502922502500506439 /* Nudity.mlpackage in Sources */,
+				882C5C532922502500506439 /* MFNudityImage.swift in Sources */,
 				882C5C2529223C7600506439 /* ViewController.swift in Sources */,
+				882C5C512922502500506439 /* MFNudity.swift in Sources */,
 				882C5C2129223C7600506439 /* AppDelegate.swift in Sources */,
 				882C5C2329223C7600506439 /* SceneDelegate.swift in Sources */,
 			);
