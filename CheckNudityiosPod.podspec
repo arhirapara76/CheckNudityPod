@@ -8,7 +8,7 @@ s.summary = "CheckNudityiosPod."
 s.requires_arc = true
 
 # 2
-s.version = "0.1.1"
+s.version = "0.1.2"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -28,7 +28,7 @@ s.framework = "UIKit"
 s.framework = "Nudity"
 
 # 8
-s.source_files = "CheckNudityPod/**/*.{swift}"
+s.source_files = "CheckNudityPod/**/*.{swift, mlpackage}"
 
 # 9
 s.resources = "CheckNudityPod/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,mlpackage}"
