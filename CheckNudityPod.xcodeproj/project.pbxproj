@@ -67,6 +67,10 @@
 				882C5C2029223C7600506439 /* AppDelegate.swift */,
 				882C5C2229223C7600506439 /* SceneDelegate.swift */,
 				882C5C2429223C7600506439 /* ViewController.swift */,
+				882C5C4029224A8A00506439 /* Nudity.mlpackage */,
+				882C5C4129224A8A00506439 /* MFNudity.swift */,
+				882C5C4229224A8A00506439 /* NudityModel.swift */,
+				882C5C4329224A8A00506439 /* MFNudityImage.swift */,
 				882C5C3F29224A8A00506439 /* NudityClass */,
 				882C5C2629223C7600506439 /* Main.storyboard */,
 				882C5C2929223C7700506439 /* Assets.xcassets */,
@@ -79,10 +83,6 @@
 		882C5C3F29224A8A00506439 /* NudityClass */ = {
 			isa = PBXGroup;
 			children = (
-				882C5C4029224A8A00506439 /* Nudity.mlpackage */,
-				882C5C4129224A8A00506439 /* MFNudity.swift */,
-				882C5C4229224A8A00506439 /* NudityModel.swift */,
-				882C5C4329224A8A00506439 /* MFNudityImage.swift */,
 			);
 			path = NudityClass;
 			sourceTree = "<group>";
