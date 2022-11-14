@@ -25,12 +25,13 @@ s.source = { :git => "https://github.com/arhirapara76/CheckNudityPod.git",
 
 # 7
 s.framework = "UIKit"
+s.framework = "Nudity"
 
 # 8
 s.source_files = "CheckNudityPod/**/*.{swift}"
 
 # 9
-s.resources = "CheckNudityPod/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+s.resources = "CheckNudityPod/**/*.{png,jpeg,jpg,storyboard,xib,xcassets,mlpackage}"
 
 # 10
 s.swift_version = "5.0"

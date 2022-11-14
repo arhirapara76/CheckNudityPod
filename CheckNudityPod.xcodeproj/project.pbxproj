@@ -64,6 +64,7 @@
 		882C5C1F29223C7600506439 /* CheckNudityPod */ = {
 			isa = PBXGroup;
 			children = (
+				882C5C4B2922502500506439 /* Nudity.mlpackage */,
 				882C5C2029223C7600506439 /* AppDelegate.swift */,
 				882C5C2229223C7600506439 /* SceneDelegate.swift */,
 				882C5C2429223C7600506439 /* ViewController.swift */,
@@ -79,7 +80,6 @@
 		882C5C4A2922502500506439 /* NudityClass */ = {
 			isa = PBXGroup;
 			children = (
-				882C5C4B2922502500506439 /* Nudity.mlpackage */,
 				882C5C4E2922502500506439 /* MFNudityImage.swift */,
 				882C5C4C2922502500506439 /* MFNudity.swift */,
 				882C5C4D2922502500506439 /* NudityModelClass.swift */,
