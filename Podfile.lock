@@ -1,0 +1,16 @@
+PODS:
+  - MFNudity (1.0.1)
+
+DEPENDENCIES:
+  - MFNudity
+
+SPEC REPOS:
+  trunk:
+    - MFNudity
+
+SPEC CHECKSUMS:
+  MFNudity: 1c7f427457aaffa5900507733d57f221ea5111c3
+
+PODFILE CHECKSUM: 619c2448ad930eda6285bbcfd00c66a0b7ecf229
+
+COCOAPODS: 1.11.3

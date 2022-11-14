@@ -1,0 +1,6 @@
+framework module MFNudity {
+  umbrella header "MFNudity-umbrella.h"
+
+  export *
+  module * { export * }
+}

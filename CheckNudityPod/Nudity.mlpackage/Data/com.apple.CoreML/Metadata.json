@@ -1,6 +1,0 @@
-{
-  "MLModelVersionStringKey" : "--",
-  "MLModelDescriptionKey" : "Classifies an image either as NSFW (nude) or SFW (not nude)",
-  "MLModelAuthorKey" : "ARHirapara",
-  "MLModelLicenseKey" : "BSD-2"
-}

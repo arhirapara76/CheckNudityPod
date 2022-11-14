@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "5D0CFC97-962B-4DA1-9002-4EF5A4870356": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "Nudity.mlmodel",
+            "path": "com.apple.CoreML/Nudity.mlmodel"
+        },
+        "A431725F-2683-4B36-82DF-16155C41BF7A": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "C9E621ED-FC4C-42B5-97D3-8A06223A27F2": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        }
+    },
+    "rootModelIdentifier": "5D0CFC97-962B-4DA1-9002-4EF5A4870356"
+}
