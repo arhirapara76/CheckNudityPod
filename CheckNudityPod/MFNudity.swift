@@ -19,7 +19,7 @@ public class MFNudity : NSObject{
     
     public typealias CompletionHandler = (_ error:Error?,_ confidence:Double?, _ safConfidence:Double?) -> Void
     
-    public typealias CompletionHandlerImageValue = (_ confidence:String?, _ safConfidence:String?) -> Void
+    public typealias CompletionHandlerImageValue = (_ nsfwValue:String?, _ sfwValue:String?) -> Void
 
     public func checkImageNudity(image:UIImage,completion: CompletionHandler){
         let confidence : Double?
