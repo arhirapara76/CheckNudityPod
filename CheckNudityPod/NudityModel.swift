@@ -114,11 +114,11 @@ extension NudityModel {
         NudityModel.checkNudity(with: imageArray, completion: completion)
     }
 
-//    private func getASnapShotWithAVLayer() -> UIImage? {
-//        let playerItem = AVPlayerItem(url: localVideoUrl)
-//        let imageFromCurrentTimeForVideoOne: UIImage? = takeVideoSnapShot(playerItem)
-//        return imageFromCurrentTimeForVideoOne
-//    }
+    private func getASnapShotWithAVLayer() -> UIImage? {
+        let playerItem = AVPlayerItem(url: localVideoUrl)
+        let imageFromCurrentTimeForVideoOne: UIImage? = UIImage()//takeVideoSnapShot(playerItem)
+        return imageFromCurrentTimeForVideoOne
+    }
 //
 //    private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
 //        let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
