@@ -103,29 +103,29 @@ extension NudityModel {
 //Create video Screen sort
 extension NudityModel {
     private func setImageInArray(completion: MFNudity.CompletionHandlerImageValue) {
-//        if let img = getASnapShotWithAVLayer() {
-//            imageArray.append(img)
-//            self.duration = self.duration - self.durationSecond
-//            if self.duration > 0 {
-//                setImageInArray(completion: completion)
-//                return
-//            }
-//        }
+        if let img = getASnapShotWithAVLayer() {
+            imageArray.append(img)
+            self.duration = self.duration - self.durationSecond
+            if self.duration > 0 {
+                setImageInArray(completion: completion)
+                return
+            }
+        }
         NudityModel.checkNudity(with: imageArray, completion: completion)
     }
 
     private func getASnapShotWithAVLayer() -> UIImage? {
         let playerItem = AVPlayerItem(url: localVideoUrl)
-        let imageFromCurrentTimeForVideoOne: UIImage? = UIImage()//takeVideoSnapShot(playerItem)
+        let imageFromCurrentTimeForVideoOne: UIImage? = takeVideoSnapShot(playerItem)
         return imageFromCurrentTimeForVideoOne
     }
-//
-//    private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
-//        let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
-//        let imageGenerator = AVAssetImageGenerator(asset: asset!)
-//        let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)//CMTimeMakeWithSeconds(self.duration, preferredTimescale: 1)
-//        let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
-//        let videoImage = UIImage(cgImage: thumb!)
-//        return videoImage
-//    }
+
+    private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
+        let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
+        let imageGenerator = AVAssetImageGenerator(asset: asset!)
+        let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)
+        let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
+        let videoImage = UIImage(cgImage: thumb!)
+        return videoImage
+    }
 }
