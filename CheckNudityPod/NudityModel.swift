@@ -183,7 +183,7 @@ extension NudityModel {
     private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
         let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
         let imageGenerator = AVAssetImageGenerator(asset: asset!)
-        let time: CMTime = CMTimeMakeWithSeconds(self.duration, preferredTimescale: 1)
+        let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)//CMTimeMakeWithSeconds(self.duration, preferredTimescale: 1)
         let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
         let videoImage = UIImage(cgImage: thumb!)
         return videoImage
