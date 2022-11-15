@@ -66,7 +66,7 @@ In order to keep Alamofire focused specifically on core networking implementatio
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| iOS 13.2+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+ | 5.0 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager), [Manual](#manually) | Fully Tested |
+| iOS 13.2+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+ | 5.0 | [CocoaPods](#cocoapods), [Manual](#manually) | Fully Tested |
 
 #### Known Issues on Linux and Windows
 
@@ -100,7 +100,7 @@ Due to these issues, Alamofire is unsupported on Linux and Windows. Please repor
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'Alamofire'
+pod 'CheckNudityPod'
 ```
 
 ### Carthage
