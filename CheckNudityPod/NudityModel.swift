@@ -5,7 +5,6 @@
 //  Created by iMac on 14/11/22.
 //
 
-import Foundation
 import UIKit
 import AVFoundation
 import MobileCoreServices
@@ -103,7 +102,7 @@ extension NudityModel {
 
 //Create video Screen sort
 extension NudityModel {
-    func setImageInArray(completion: MFNudity.CompletionHandlerImageValue) {
+    private func setImageInArray(completion: MFNudity.CompletionHandlerImageValue) {
         if let img = snapShot() {
             imageArray.append(img)
             self.duration = self.duration - self.durationSecond
@@ -115,7 +114,7 @@ extension NudityModel {
         NudityModel.checkNudity(with: imageArray, completion: completion)
     }
     
-    func snapShot() -> UIImage? {
+    private func snapShot() -> UIImage? {
         if self.duration > 0 {
             let capturedImage: UIImage? = getASnapShotWithAVLayer()
             return capturedImage
@@ -123,7 +122,7 @@ extension NudityModel {
         return nil
     }
 
-    func getASnapShotWithAVLayer() -> UIImage? {
+    private func getASnapShotWithAVLayer() -> UIImage? {
         let playerItem1 = AVPlayerItem(url: localVideoUrl)
 
         let temporaryViewForVideoOne = UIImageView(frame: UIScreen.main.bounds)
@@ -181,21 +180,20 @@ extension NudityModel {
         return image!
     }
 
-    func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
+    private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
         let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
-        let preferredTimerScale = Int32(asset!.duration.seconds * 10)
         let imageGenerator = AVAssetImageGenerator(asset: asset!)
-        var time: CMTime = CMTimeMakeWithSeconds(self.duration, preferredTimescale: 1)
+        let time: CMTime = CMTimeMakeWithSeconds(self.duration, preferredTimescale: 1)
         let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
         let videoImage = UIImage(cgImage: thumb!)
         return videoImage
     }
     
-    func getTheActualOrientationOfVideo(_ playerItem: AVPlayerItem) -> Int {
+    private func getTheActualOrientationOfVideo(_ playerItem: AVPlayerItem) -> Int {
         return 90
     }
     
-    func normalizedImage(_ imageOf: UIImage) -> UIImage {
+    private func normalizedImage(_ imageOf: UIImage) -> UIImage {
         if imageOf.imageOrientation == .up {
             return imageOf
         }
