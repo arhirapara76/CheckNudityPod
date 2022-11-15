@@ -57,7 +57,7 @@ Total 3 security level High, Medium & Low.
 
 | High | Medium | Low |
 | --- | --- | --- |
-| Take screenshot 1 Second. / Take screenshot 2 Second. / Take screenshot 4 Second. |
+| Take screenshot 1 Second. | Take screenshot 2 Second. | Take screenshot 4 Second. |
 
 ## License
 
