@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "CheckNudityiosPod"
-    s.version          = "0.1.22"
+    s.version          = "0.1.23"
     s.summary          = 'Check image nudity'
     s.license          = 'MIT'
     s.author           = {'Ajay' => 'ajay@appringer.com'}
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
 
     s.source_files = 'CheckNudityPod', 'CheckNudityPod/**/*.{swift,mlmodel,MobileCoreServices}'
 
-    s.frameworks = 'UIKit', 'Foundation','Vision','CoreML','AVFoundation'
+    s.frameworks = 'UIKit', 'Foundation','Vision','CoreML','AVFoundation','CoreMedia'
     s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 end
