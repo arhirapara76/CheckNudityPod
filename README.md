@@ -66,9 +66,7 @@ In order to keep Alamofire focused specifically on core networking implementatio
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| iOS 10.0+ / macOS 10.12+ / tvOS 10.0+ / watchOS 3.0+ | 5.3 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager), [Manual](#manually) | Fully Tested |
-| Linux | Latest Only | [Swift Package Manager](#swift-package-manager) | Building But Unsupported |
-| Windows | Latest Only | [Swift Package Manager](#swift-package-manager) | Building But Unsupported |
+| iOS 13.2+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+ | 5.0 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager), [Manual](#manually) | Fully Tested |
 
 #### Known Issues on Linux and Windows
 
