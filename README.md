@@ -18,6 +18,8 @@ pod 'CheckNudityPod'
 
 ## Usage
 
+This 'confidence' shows float value from 0 to 100.
+
 Step - Pass image to MFNudity's shared object
 
 ```
@@ -49,13 +51,13 @@ Step - Pass local video url to MFNudity's shared object
 
 ```
 
-# SecurityLevel
+## SecurityLevel
 
 Total 3 security level High, Medium & Low.
 
-
-
-This 'confidence' shows float value from 0 to 100.
+| High | Medium | Low |
+| --- | --- | --- | --- |
+| Take screenshot 1 Second. / Take screenshot 2 Second. / Take screenshot 4 Second. |
 
 ## License
 
