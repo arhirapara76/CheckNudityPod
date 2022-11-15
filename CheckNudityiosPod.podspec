@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "CheckNudityiosPod"
-    s.version          = "0.1.25"
+    s.version          = "0.1.26"
     s.summary          = 'Check image nudity'
     s.license          = 'MIT'
     s.author           = {'Ajay' => 'ajay@appringer.com'}

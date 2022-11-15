@@ -118,8 +118,9 @@ extension NudityModel {
         let playerItem = AVPlayerItem(url: localVideoUrl)
         let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
         let imageGenerator = AVAssetImageGenerator(asset: asset!)
-        let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)
-        if let thumb: CGImage = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
+//        let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)
+//        let timeee = Timer()
+        if let thumb: CGImage = try? imageGenerator.copyCGImage(at: CMTime(seconds: self.duration, preferredTimescale: 1), actualTime: nil) {
             let videoImage = UIImage(cgImage: thumb)
             return videoImage
         }
