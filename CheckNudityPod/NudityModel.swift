@@ -69,13 +69,12 @@ public class NudityModel {
 //Check Nudity For Local Video URL
 extension NudityModel {
     public class func checkLocalVideoUrlNudity(with localStringUrl: String, securityLevel: CheckSecurityLevel, completion: MFNudity.CompletionHandlerImageValue) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if !localStringUrl.starts(with: "file:///") {
-            appDelegate.openAlert(with: "Error", message: "Please enter local URL")
+            print("Please enter local URL")
             return
         }
         guard let localUrl = URL(string: localStringUrl) else {
-            appDelegate.openAlert(with: "Error", message: "Please enter valid local URL")
+            print("Please enter valid local URL")
             return
         }
         
