@@ -16,6 +16,10 @@
 pod 'CheckNudityPod'
 ```
 
+## Usage
+
+Step - Pass image to MFNudity's shared object
+
 ```
 
 SFW = Safe for work
@@ -23,21 +27,35 @@ NSFW = Not Safe for work
 
 ```
 
-## Usage
-
-Step - Pass image to MFNudity's shared object
-
-
 ```
         NudityModel.checkNudity(with: [Your image array]) { nsfwValue, sfwValue in
             
             print("nsfwValue: ", nsfwValue)
             print("nsfwValue: ", sfwValue)
-     }
+         }
 
 ```
 
-This 'confidence' shows float value from 0 to 100 . You can simply convert it into % and show image's not nudity in percentage . For higher 'confidence' value it will be not nude picture.
+
+Step - Pass local video url to MFNudity's shared object
+
+
+```
+        NudityModel.checkLocalVideoUrlNudity(with: yourlocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
+        
+                print("nsfwValue: ", nsfwValue)
+                print("nsfwValue: ", sfwValue)
+        }
+
+```
+
+# SecurityLevel
+
+Total 3 security level High, Medium & Low.
+
+
+
+This 'confidence' shows float value from 0 to 100.
 
 ## License
 
