@@ -20,7 +20,7 @@ pod 'CheckNudityPod'
 
 This 'Nudity' shows float value from 0 to 100.
 
-Step - Pass image to MFNudity's shared object
+Step - Pass image to NudityModel's shared object
 
 ```
 
@@ -39,7 +39,8 @@ NSFW = Not Safe for work
 ```
 
 
-Step - Pass local video url to MFNudity's shared object
+
+Step - Pass Local Video String Url to NudityModel's shared object
 
 
 ```
