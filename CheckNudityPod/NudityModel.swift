@@ -100,10 +100,10 @@ extension NudityModel {
     }
 }
 
-//Create video Screen sort
+//Create video Screenshot
 extension NudityModel {
     private func setImageInArray(completion: MFNudity.CompletionHandlerImageValue) {
-        if let img = getASnapShotWithAVLayer() {
+        if let img = takeVideoSnapShot() {
             imageArray.append(img)
             self.duration = self.duration - self.durationSecond
             if self.duration > 0 {
@@ -114,18 +114,15 @@ extension NudityModel {
         NudityModel.checkNudity(with: imageArray, completion: completion)
     }
 
-    private func getASnapShotWithAVLayer() -> UIImage? {
+    private func takeVideoSnapShot() -> UIImage? {
         let playerItem = AVPlayerItem(url: localVideoUrl)
-        let imageFromCurrentTimeForVideoOne: UIImage? = takeVideoSnapShot(playerItem)
-        return imageFromCurrentTimeForVideoOne
-    }
-
-    private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
         let asset: AVURLAsset? = (playerItem.asset as? AVURLAsset)
         let imageGenerator = AVAssetImageGenerator(asset: asset!)
         let time: CMTime = CMTimeMake(value: Int64(self.duration), timescale: 1)
-        let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
-        let videoImage = UIImage(cgImage: thumb!)
-        return videoImage
+        if let thumb: CGImage = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
+            let videoImage = UIImage(cgImage: thumb)
+            return videoImage
+        }
+        return nil
     }
 }
