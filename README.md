@@ -66,7 +66,7 @@ In order to keep Alamofire focused specifically on core networking implementatio
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| iOS 13.2+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+ | 5.0 | [CocoaPods](#cocoapods), [Manual](#manually) | Fully Tested |
+| iOS 13.2+ / macOS 10.13+ / tvOS 11.0+ / watchOS 4.0+ | 5.0 | [CocoaPods](#cocoapods) | Fully Tested |
 
 #### Known Issues on Linux and Windows
 
@@ -103,126 +103,6 @@ Due to these issues, Alamofire is unsupported on Linux and Windows. Please repor
 pod 'CheckNudityPod'
 ```
 
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "Alamofire/Alamofire"
-```
-
-### Swift Package Manager
-
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. 
-
-Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1"))
-]
-```
-
-### Manually
-
-If you prefer not to use any of the aforementioned dependency managers, you can integrate Alamofire into your project manually.
-
-#### Embedded Framework
-
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
-
-  ```bash
-  $ git init
-  ```
-
-- Add Alamofire as a git [submodule](https://git-scm.com/docs/git-submodule) by running the following command:
-
-  ```bash
-  $ git submodule add https://github.com/Alamofire/Alamofire.git
-  ```
-
-- Open the new `Alamofire` folder, and drag the `Alamofire.xcodeproj` into the Project Navigator of your application's Xcode project.
-
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
-
-- Select the `Alamofire.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `Alamofire.xcodeproj` folders each with two different versions of the `Alamofire.framework` nested inside a `Products` folder.
-
-    > It does not matter which `Products` folder you choose from, but it does matter whether you choose the top or bottom `Alamofire.framework`.
-
-- Select the top `Alamofire.framework` for iOS and the bottom one for macOS.
-
-    > You can verify which one you selected by inspecting the build log for your project. The build target for `Alamofire` will be listed as `Alamofire iOS`, `Alamofire macOS`, `Alamofire tvOS`, or `Alamofire watchOS`.
-
-- And that's it!
-
-  > The `Alamofire.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
-
-## Contributing
-
-Before contributing to Alamofire, please read the instructions detailed in our [contribution guide](https://github.com/Alamofire/Alamofire/blob/master/CONTRIBUTING.md).
-
-## Open Radars
-
-The following radars have some effect on the current implementation of Alamofire.
-
-- [`rdar://21349340`](http://www.openradar.me/radar?id=5517037090635776) - Compiler throwing warning due to toll-free bridging issue in the test case
-- `rdar://26870455` - Background URL Session Configurations do not work in the simulator
-- `rdar://26849668` - Some URLProtocol APIs do not properly handle `URLRequest`
-
-## Resolved Radars
-
-The following radars have been resolved over time after being filed against the Alamofire project.
-
-- [`rdar://26761490`](http://www.openradar.me/radar?id=5010235949318144) - Swift string interpolation causing memory leak with common usage.
-  - (Resolved): 9/1/17 in Xcode 9 beta 6.
-- [`rdar://36082113`](http://openradar.appspot.com/radar?id=4942308441063424) - `URLSessionTaskMetrics` failing to link on watchOS 3.0+
-  - (Resolved): Just add `CFNetwork` to your linked frameworks.
-- `FB7624529` - `urlSession(_:task:didFinishCollecting:)` never called on watchOS
-  - (Resolved): Metrics now collected on watchOS 7+.
-
-## FAQ
-
-### What's the origin of the name Alamofire?
-
-Alamofire is named after the [Alamo Fire flower](https://aggie-horticulture.tamu.edu/wildseed/alamofire.html), a hybrid variant of the Bluebonnet, the official state flower of Texas.
-
-## Credits
-
-Alamofire is owned and maintained by the [Alamofire Software Foundation](http://alamofire.org). You can follow them on Twitter at [@AlamofireSF](https://twitter.com/AlamofireSF) for project updates and releases.
-
-### Security Disclosure
-
-If you believe you have identified a security vulnerability with Alamofire, you should report it as soon as possible via email to security@alamofire.org. Please do not post it to a public issue tracker.
-
-## Sponsorship
-
-The [ASF](https://github.com/Alamofire/Foundation#members) is looking to raise money to officially stay registered as a federal non-profit organization.
-Registering will allow Foundation members to gain some legal protections and also allow us to put donations to use, tax-free.
-Sponsoring the ASF will enable us to:
-
-- Pay our yearly legal fees to keep the non-profit in good status
-- Pay for our mail servers to help us stay on top of all questions and security issues
-- Potentially fund test servers to make it easier for us to test the edge cases
-- Potentially fund developers to work on one of our projects full-time
-
-The community adoption of the ASF libraries has been amazing.
-We are greatly humbled by your enthusiasm around the projects and want to continue to do everything we can to move the needle forward.
-With your continued support, the ASF will be able to improve its reach and also provide better legal safety for the core members.
-If you use any of our libraries for work, see if your employers would be interested in donating.
-Any amount you can donate, whether once or monthly, to help us reach our goal would be greatly appreciated.
-
-[Sponsor Alamofire](https://github.com/sponsors/Alamofire)
-
-## Supporters
-
-[MacStadium](https://macstadium.com) provides Alamofire with a free, hosted Mac mini.
-
-![Powered by MacStadium](https://raw.githubusercontent.com/Alamofire/Alamofire/master/Resources/MacStadiumLogo.png)
-
 ## License
 
-Alamofire is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
+CheckNudityPod is released under the MIT license. [See LICENSE](http://www.opensource.org/licenses/MIT) for details.
