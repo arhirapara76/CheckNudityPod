@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88147BCA292358B5001C3015 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88147BC9292358B5001C3015 /* Enum.swift */; };
 		882C5C2129223C7600506439 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C2029223C7600506439 /* AppDelegate.swift */; };
-		882C5C2329223C7600506439 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C2229223C7600506439 /* SceneDelegate.swift */; };
 		882C5C2529223C7600506439 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C5C2429223C7600506439 /* ViewController.swift */; };
 		882C5C2829223C7600506439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882C5C2629223C7600506439 /* Main.storyboard */; };
 		882C5C2A29223C7700506439 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882C5C2929223C7700506439 /* Assets.xcassets */; };
@@ -20,9 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88147BC9292358B5001C3015 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		882C5C1D29223C7600506439 /* CheckNudityPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckNudityPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882C5C2029223C7600506439 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		882C5C2229223C7600506439 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		882C5C2429223C7600506439 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		882C5C2729223C7600506439 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		882C5C2929223C7700506439 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,26 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				882C5C2029223C7600506439 /* AppDelegate.swift */,
-				882C5C2229223C7600506439 /* SceneDelegate.swift */,
 				882C5C2429223C7600506439 /* ViewController.swift */,
 				882C5C4029224A8A00506439 /* Nudity.mlpackage */,
 				882C5C4129224A8A00506439 /* MFNudity.swift */,
-				882C5C4229224A8A00506439 /* NudityModel.swift */,
 				882C5C4329224A8A00506439 /* MFNudityImage.swift */,
-				882C5C3F29224A8A00506439 /* NudityClass */,
+				882C5C4229224A8A00506439 /* NudityModel.swift */,
+				88147BC9292358B5001C3015 /* Enum.swift */,
 				882C5C2629223C7600506439 /* Main.storyboard */,
 				882C5C2929223C7700506439 /* Assets.xcassets */,
 				882C5C2B29223C7700506439 /* LaunchScreen.storyboard */,
 				882C5C2E29223C7700506439 /* Info.plist */,
 			);
 			path = CheckNudityPod;
-			sourceTree = "<group>";
-		};
-		882C5C3F29224A8A00506439 /* NudityClass */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NudityClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,11 +152,11 @@
 			files = (
 				882C5C4729224A8A00506439 /* NudityModel.swift in Sources */,
 				882C5C4529224A8A00506439 /* Nudity.mlpackage in Sources */,
+				88147BCA292358B5001C3015 /* Enum.swift in Sources */,
 				882C5C4829224A8A00506439 /* MFNudityImage.swift in Sources */,
 				882C5C2529223C7600506439 /* ViewController.swift in Sources */,
 				882C5C4629224A8A00506439 /* MFNudity.swift in Sources */,
 				882C5C2129223C7600506439 /* AppDelegate.swift in Sources */,
-				882C5C2329223C7600506439 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
