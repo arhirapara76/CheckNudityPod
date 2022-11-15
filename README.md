@@ -16,6 +16,29 @@
 pod 'CheckNudityPod'
 ```
 
+```
+
+SFW = Safe for work
+NSFW = Not Safe for work
+
+```
+
+## Usage
+
+Step - Pass image to MFNudity's shared object
+
+
+```
+        NudityModel.checkNudity(with: [Your image array]) { nsfwValue, sfwValue in
+            
+            print("nsfwValue: ", nsfwValue)
+            print("nsfwValue: ", sfwValue)
+     }
+
+```
+
+This 'confidence' shows float value from 0 to 100 . You can simply convert it into % and show image's not nudity in percentage . For higher 'confidence' value it will be not nude picture.
+
 ## License
 
 CheckNudityPod is released under the MIT license. [See LICENSE](http://www.opensource.org/licenses/MIT) for details.
