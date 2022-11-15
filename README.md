@@ -18,7 +18,7 @@ pod 'CheckNudityPod'
 
 ## Usage
 
-This 'confidence' shows float value from 0 to 100.
+This 'Nudity' shows float value from 0 to 100.
 
 Step - Pass image to MFNudity's shared object
 
