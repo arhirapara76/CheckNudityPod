@@ -16,6 +16,51 @@
 pod 'CheckNudityPod'
 ```
 
+## Usage
+
+This 'Nudity' shows float value from 0 to 100.
+
+Step - Pass image to NudityModel's shared object
+
+```
+
+SFW = Safe for work
+NSFW = Not Safe for work
+
+```
+
+```
+        NudityModel.checkNudity(with: [Your-Image-Array]) { nsfwValue, sfwValue in
+            
+            print("nsfwValue: ", nsfwValue)
+            print("nsfwValue: ", sfwValue)
+         }
+
+```
+
+
+
+Step - Pass Local Video String Url to NudityModel's shared object
+
+
+```
+        NudityModel.checkLocalVideoUrlNudity(with: YourLocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
+        
+                print("nsfwValue: ", nsfwValue)
+                print("nsfwValue: ", sfwValue)
+        }
+
+```
+
+## SecurityLevel
+
+Total 3 security level High, Medium & Low.
+
+| High | Medium | Low |
+| --- | --- | --- |
+| Take Screenshot 1 Second. | Take Screenshot 2 Second. | Take Screenshot 4 Second. |
+
+
 ## License
 
 CheckNudityPod is released under the MIT license. [See LICENSE](http://www.opensource.org/licenses/MIT) for details.
