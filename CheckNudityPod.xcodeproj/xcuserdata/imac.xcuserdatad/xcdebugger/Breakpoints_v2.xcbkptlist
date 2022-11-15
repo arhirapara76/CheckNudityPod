@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DCA1205B-C2E8-4744-A9CD-511681A21335"
+            uuid = "B105012C-3E29-4DC9-B02B-229DB4226D24"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CheckNudityPod/NudityModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "takeVideoSnapShot(_:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "getASnapShotWithAVLayer()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
