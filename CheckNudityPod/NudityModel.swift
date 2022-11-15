@@ -123,61 +123,9 @@ extension NudityModel {
     }
 
     private func getASnapShotWithAVLayer() -> UIImage? {
-        let playerItem1 = AVPlayerItem(url: localVideoUrl)
-
-        let temporaryViewForVideoOne = UIImageView(frame: UIScreen.main.bounds)
-        var imageFromCurrentTimeForVideoOne: UIImage? = takeVideoSnapShot(playerItem1)
-        var orientationFromVideoForVideoOne: Int = getTheActualOrientationOfVideo(playerItem1)
-        if orientationFromVideoForVideoOne == 0 {
-            orientationFromVideoForVideoOne = 3
-        }
-        else if orientationFromVideoForVideoOne == 90 {
-            orientationFromVideoForVideoOne = 0
-        }
-
-        imageFromCurrentTimeForVideoOne = UIImage(cgImage: (imageFromCurrentTimeForVideoOne?.cgImage)!, scale: imageFromCurrentTimeForVideoOne!.scale, orientation: UIImage.Orientation(rawValue: orientationFromVideoForVideoOne) ?? .down)
-        let rotatedImageFromCurrentContextForVideoOne: UIImage? = normalizedImage(imageFromCurrentTimeForVideoOne!)
-        temporaryViewForVideoOne.clipsToBounds = true
-        temporaryViewForVideoOne.image = rotatedImageFromCurrentContextForVideoOne
-        var imageSize = CGSize.zero
-        let orientation: UIInterfaceOrientation = UIApplication.shared.statusBarOrientation
-        if orientation.isPortrait {
-            imageSize = UIScreen.main.bounds.size
-        }
-        else {
-            imageSize = CGSize(width: CGFloat(UIScreen.main.bounds.size.height), height: CGFloat(UIScreen.main.bounds.size.width))
-        }
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, UIScreen.main.scale)
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        for window: UIWindow in UIApplication.shared.windows {
-            context.saveGState()
-            context.translateBy(x: window.center.x, y: window.center.y)
-            context.concatenate(window.transform)
-            context.translateBy(x: -window.bounds.size.width * window.layer.anchorPoint.x, y: -window.bounds.size.height * window.layer.anchorPoint.y)
-            if orientation == .landscapeLeft {
-                context.rotate(by: M_PI_2)
-                context.translateBy(x: 0, y: -imageSize.width)
-            }
-            else if orientation == .landscapeRight {
-                context.rotate(by: -M_PI_2)
-                context.translateBy(x: -imageSize.height, y: 0)
-            }
-            else if orientation == .portraitUpsideDown {
-                context.rotate(by: .pi)
-                context.translateBy(x: -imageSize.width, y: -imageSize.height)
-            }
-            if !window.responds(to: Selector("drawViewHierarchyInRect:afterScreenUpdates:")) {
-                window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
-            }
-            else {
-                window.drawHierarchy(in: window.bounds, afterScreenUpdates: true)
-            }
-            context.restoreGState()
-        }
-        let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        temporaryViewForVideoOne.removeFromSuperview()
-        return image!
+        let playerItem = AVPlayerItem(url: localVideoUrl)
+        let imageFromCurrentTimeForVideoOne: UIImage? = takeVideoSnapShot(playerItem)
+        return imageFromCurrentTimeForVideoOne
     }
 
     private func takeVideoSnapShot(_ playerItem: AVPlayerItem) -> UIImage {
@@ -187,19 +135,5 @@ extension NudityModel {
         let thumb: CGImage? = try? imageGenerator.copyCGImage(at: time, actualTime: nil)
         let videoImage = UIImage(cgImage: thumb!)
         return videoImage
-    }
-    
-    private func getTheActualOrientationOfVideo(_ playerItem: AVPlayerItem) -> Int {
-        return 90
-    }
-    
-    private func normalizedImage(_ imageOf: UIImage) -> UIImage {
-        if imageOf.imageOrientation == .up {
-            return imageOf
-        }
-        UIGraphicsBeginImageContextWithOptions(imageOf.size, false, imageOf.scale)
-        let normalizedImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return normalizedImage!
     }
 }
