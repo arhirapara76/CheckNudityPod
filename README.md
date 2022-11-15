@@ -30,7 +30,7 @@ NSFW = Not Safe for work
 ```
 
 ```
-        NudityModel.checkNudity(with: [Your image array]) { nsfwValue, sfwValue in
+        NudityModel.checkNudity(with: [Your-Image-Array]) { nsfwValue, sfwValue in
             
             print("nsfwValue: ", nsfwValue)
             print("nsfwValue: ", sfwValue)
@@ -43,7 +43,7 @@ Step - Pass local video url to MFNudity's shared object
 
 
 ```
-        NudityModel.checkLocalVideoUrlNudity(with: yourlocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
+        NudityModel.checkLocalVideoUrlNudity(with: YourLocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
         
                 print("nsfwValue: ", nsfwValue)
                 print("nsfwValue: ", sfwValue)
@@ -57,7 +57,8 @@ Total 3 security level High, Medium & Low.
 
 | High | Medium | Low |
 | --- | --- | --- |
-| Take screenshot 1 Second. | Take screenshot 2 Second. | Take screenshot 4 Second. |
+| Take Screenshot 1 Second. | Take Screenshot 2 Second. | Take Screenshot 4 Second. |
+
 
 ## License
 
