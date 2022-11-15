@@ -1,30 +1,5 @@
 # CheckNudityPod
 
-## Features
-
-- [x] Chainable Request / Response Methods
-- [x] Swift Concurrency Support Back to iOS 13, macOS 10.15, tvOS 13, and watchOS 6.
-- [x] Combine Support
-- [x] URL / JSON Parameter Encoding
-- [x] Upload File / Data / Stream / MultipartFormData
-- [x] Download File using Request or Resume Data
-- [x] Authentication with `URLCredential`
-- [x] HTTP Response Validation
-- [x] Upload and Download Progress Closures with Progress
-- [x] cURL Command Output
-- [x] Dynamically Adapt and Retry Requests
-- [x] TLS Certificate and Public Key Pinning
-- [x] Network Reachability
-- [x] Comprehensive Unit and Integration Test Coverage
-- [x] [Complete Documentation](https://alamofire.github.io/Alamofire)
-
-## Component Libraries
-
-In order to keep Alamofire focused specifically on core networking implementations, additional component libraries have been created by the [Alamofire Software Foundation](https://github.com/Alamofire/Foundation) to bring additional functionality to the Alamofire ecosystem.
-
-- [AlamofireImage](https://github.com/Alamofire/AlamofireImage) - An image library including image response serializers, `UIImage` and `UIImageView` extensions, custom image filters, an auto-purging in-memory cache, and a priority-based image downloading system.
-- [AlamofireNetworkActivityIndicator](https://github.com/Alamofire/AlamofireNetworkActivityIndicator) - Controls the visibility of the network activity indicator on iOS using Alamofire. It contains configurable delay timers to help mitigate flicker and can support `URLSession` instances not managed by Alamofire.
-
 ## Requirements
 
 | Platform | Minimum Swift Version | Installation | Status |
@@ -60,7 +35,7 @@ Due to these issues, Alamofire is unsupported on Linux and Windows. Please repor
 
 ### CocoaPods
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate CheckNudityPod into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'CheckNudityPod'
