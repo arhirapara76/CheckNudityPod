@@ -14,19 +14,21 @@ public class NudityModel {
         var confidence : String? = "0"
         var safConfidence : String? = "0"
         if !imageArray.isEmpty {
-            if let image = imageArray.first {
-                MFNudity.shared.checkImageNudity(image: image) { (error, nsafValue, safVale)  in
-                    if error == nil {
-                        let convertedSaf = String(format: "%.2f", safVale!)
-                        let convertedNsaf = String(format: "%.2f", nsafValue!)
-                        confidence = convertedNsaf
-                        safConfidence = convertedSaf
-                        completion(confidence, safConfidence)
-                    } else {
-                        print("error: ", error)
+            if imageArray.count == 1 {
+                if let image = imageArray.first {
+                    MFNudity.shared.checkImageNudity(image: image) { (error, nsafValue, safVale)  in
+                        if error == nil {
+                            let convertedSaf = String(format: "%.2f", safVale!)
+                            let convertedNsaf = String(format: "%.2f", nsafValue!)
+                            confidence = convertedNsaf
+                            safConfidence = convertedSaf
+                            completion(confidence, safConfidence)
+                        } else {
+                            print("error: ", error)
+                        }
                     }
                 }
-            } else {
+            }else {
                 var imageCount = 0
                 var safeValue: Double = 0
                 var nsafeValue: Double = 0
