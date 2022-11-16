@@ -30,25 +30,24 @@ NSFW = Not Safe for work
 ```
 
 ```
-        NudityModel.checkNudity(with: [Your-Image-Array]) { nsfwValue, sfwValue in
-            
-            print("nsfwValue: ", nsfwValue)
-            print("nsfwValue: ", sfwValue)
-         }
+   NudityModel.checkNudity(with: [Your-Image-Array]) { nsfwValue, sfwValue in
+          
+     print("nsfwValue: ", nsfwValue)
+     print("nsfwValue: ", sfwValue)
+  }
 
 ```
-
 
 
 Step - Pass Local Video String Url to NudityModel's shared object
 
 
 ```
-        NudityModel.checkLocalVideoUrlNudity(with: YourLocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
+  NudityModel.checkLocalVideoUrlNudity(with: YourLocalVideoStringUrl, securityLevel: .low) { nsfwValue, sfwValue in
         
-                print("nsfwValue: ", nsfwValue)
-                print("nsfwValue: ", sfwValue)
-        }
+        print("nsfwValue: ", nsfwValue)
+        print("nsfwValue: ", sfwValue)
+  }
 
 ```
 
